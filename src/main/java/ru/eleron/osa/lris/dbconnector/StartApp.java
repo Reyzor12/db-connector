@@ -14,6 +14,9 @@ public class StartApp extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
+        primaryStage.setMinHeight(270);
+        primaryStage.setMinWidth(370);
+//        primaryStage.setResizable(false);
         SceneLoader.setStage(primaryStage);
         SceneLoader.loadScene("view/MainFrame.fxml");
     }
