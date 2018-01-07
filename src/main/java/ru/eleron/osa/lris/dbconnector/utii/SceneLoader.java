@@ -6,17 +6,14 @@ import javafx.stage.Stage;
 
 public class SceneLoader {
 
-    public static Stage stage;
 
     private static final SpringFXMLLoader loader = new SpringFXMLLoader();
 
-    public static void loadScene(String url){
+    public static void loadScene(String url,Stage stage){
         if(stage == null) return;
         Parent root = (Parent) loader.load(url);
         stage.setScene(new Scene(root));
         stage.show();
     }
-    public static void setStage(Stage stageArg){
-        stage = stageArg;
-    }
+
 }
