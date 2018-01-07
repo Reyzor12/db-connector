@@ -12,6 +12,7 @@
     <properties>
         <version.java>1.8</version.java>
         <version.spring>4.3.12.RELEASE</version.spring>
+        <version.h2>1.4.196</version.h2>
     </properties>
 
     <build>
@@ -50,9 +51,24 @@
             <version>${version.spring}</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${version.spring}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${version.h2}</version>
         </dependency>
     </dependencies>
 
