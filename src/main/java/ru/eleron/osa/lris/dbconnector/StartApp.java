@@ -18,7 +18,8 @@ public class StartApp extends Application {
     public static final String CREATE_IF_NOT_EXISTS =
             "CREATE TABLE IF NOT EXISTS CONNECTIONS(" +
                     "ID INT PRIMARY KEY AUTO_INCREMENT," +
-                    "TYPE VARCHAR(255)," +
+                    "NAME VARCHAR(255)," +
+                    "TYPE INT(255)," +
                     "IP VARCHAR(255)," +
                     "PORT VARCHAR(255)," +
                     "NAMEDB VARCHAR(255)," +

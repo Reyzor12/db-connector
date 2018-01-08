@@ -48,12 +48,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="109.0" layoutY="187.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="textFieldIp" layoutX="109.0" layoutY="187.0" prefHeight="26.0" prefWidth="149.0" />
       <TextField fx:id="textFieldPort" layoutX="344.0" layoutY="187.0" prefHeight="26.0" prefWidth="69.0" />
-      <TextField layoutX="196.0" layoutY="236.0" />
+      <TextField  layoutX="196.0" layoutY="236.0" />
       <TextField layoutX="196.0" layoutY="281.0" />
       <Button layoutX="300.0" layoutY="354.0" mnemonicParsing="false" text="Сохранить" />
-      <Button layoutX="472.0" layoutY="354.0" mnemonicParsing="false" text="Выйти" />
+      <Button onAction="#exit" layoutX="472.0" layoutY="354.0" mnemonicParsing="false" text="Выйти" />
       <PasswordField layoutX="196.0" layoutY="324.0" />
       <Label layoutX="33.0" layoutY="327.0" text="Пароль">
          <font>
