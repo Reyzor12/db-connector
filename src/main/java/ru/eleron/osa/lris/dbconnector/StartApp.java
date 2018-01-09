@@ -10,10 +10,13 @@ import ru.eleron.osa.lris.dbconnector.utii.SceneLoader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class StartApp extends Application {
 
     public static Connection connection;
+
+    private static final String DROP_TABLE = "DROP TABLE CONNECTIONS";
 
     public static final String CREATE_IF_NOT_EXISTS =
             "CREATE TABLE IF NOT EXISTS CONNECTIONS(" +
@@ -32,7 +35,7 @@ public class StartApp extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        Class.forName("org.h2.Driver");
+        Class.forName("org.h2.Driver").newInstance();
         connection = DriverManager.getConnection("jdbc:h2:./test","test","");
         initBD();
 
@@ -57,7 +60,9 @@ public class StartApp extends Application {
     public void initBD(){
         if(connection != null){
             try {
-                connection.createStatement().execute(CREATE_IF_NOT_EXISTS);
+                Statement stm = connection.createStatement();
+                stm.executeUpdate(CREATE_IF_NOT_EXISTS);
+                stm.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

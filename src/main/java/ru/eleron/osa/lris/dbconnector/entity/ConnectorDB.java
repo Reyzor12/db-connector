@@ -11,8 +11,8 @@ public class ConnectorDB {
     private String user;
     private String password;
 
-    public ConnectorDB(Integer id, String name, Integer typeDB, String ip, String port, String nameDB, String user, String password){
-        this.id = id;
+    public ConnectorDB(String name, Integer typeDB, String ip, String port, String nameDB, String user, String password){
+
         this.name = name;
         this.typeDB = typeDB;
         this.ip = ip;

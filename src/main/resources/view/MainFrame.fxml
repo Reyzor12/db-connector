@@ -8,9 +8,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="220.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.eleron.osa.lris.dbconnector.controller.MainFrameController">
+<AnchorPane prefHeight="220.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.eleron.osa.lris.dbconnector.controller.MainFrameController">
    <children>
-      <Button layoutX="136.0" layoutY="174.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="154.0">
+      <Button layoutX="136.0" layoutY="174.0" mnemonicParsing="false" onAction="#checkConnection" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="154.0">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -19,7 +19,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button onAction="#addConnection" layoutX="288.0" layoutY="19.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="19.0">
+      <Button layoutX="288.0" layoutY="19.0" mnemonicParsing="false" onAction="#addConnection" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="19.0">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <viewport>
@@ -31,7 +31,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="buttonExit" onAction="#exit" layoutX="216.0" layoutY="174.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="74.0">
+      <Button fx:id="buttonExit" layoutX="216.0" layoutY="174.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="74.0">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -40,7 +40,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="288.0" layoutY="73.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="73.0">
+      <Button layoutX="288.0" layoutY="73.0" mnemonicParsing="false" onAction="#removeConnection" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="73.0">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -52,14 +52,14 @@
       <ListView fx:id="listViewConnectorDB" layoutX="11.0" layoutY="19.0" prefHeight="152.0" prefWidth="266.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="19.0" />
       <Label layoutX="26.0" layoutY="160.0" prefHeight="26.0" prefWidth="86.0" AnchorPane.bottomAnchor="13.600000000000001" AnchorPane.leftAnchor="26.0">
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fx:id="imageViewCheckConnection" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
-                  <Image url="@../image/Не%20найден%20высокий-приоритет-50.png" />
+                  <Image url="@../image/notFindDB.png" />
                </image>
             </ImageView>
          </graphic>
       </Label>
-      <Button layoutX="288.0" layoutY="127.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="127.0">
+      <Button layoutX="288.0" layoutY="127.0" mnemonicParsing="false" onAction="#updateConnector" prefHeight="35.0" prefWidth="35.0" AnchorPane.rightAnchor="10.800000000000011" AnchorPane.topAnchor="127.0">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
