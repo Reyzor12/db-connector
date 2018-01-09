@@ -29,6 +29,8 @@ public class MainFrameController {
 
     private Stage stage;
 
+    public Stage getStage(){return stage;}
+
     @Autowired
     private H2DAO h2DAO;
 

@@ -8,6 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.eleron.osa.lris.dbconnector.bussiness.H2DAO;
@@ -96,10 +97,14 @@ public class SetupConnectionController {
             textFieldUser.setText(c.getUser());
             passwordFieldPassword.setText(c.getPassword());
         }
+        mainFrameController.getStage().setOnCloseRequest(event->{
+            exit();
+        });
     }
 
     @FXML
     public void exit(){
+        MainFrameController.connectorDB = null;
         ((Stage)choiceBoxListDB.getScene().getWindow()).close();
     }
     @FXML
@@ -125,7 +130,6 @@ public class SetupConnectionController {
                 c.setUser(textFieldUser.getText());
                 c.setPassword(passwordFieldPassword.getText());
                 h2DAO.updateConnector(c);
-                MainFrameController.connectorDB = null;
             }
             mainFrameController.updateData();
             exit();
