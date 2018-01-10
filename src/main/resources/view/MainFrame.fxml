@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="220.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.eleron.osa.lris.dbconnector.controller.MainFrameController">
    <children>
-      <Button layoutX="136.0" layoutY="174.0" mnemonicParsing="false" onAction="#checkConnection" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="154.0">
+      <Button fx:id="buttonCheck" layoutX="136.0" layoutY="174.0" mnemonicParsing="false" onAction="#startConnection" prefHeight="26.0" prefWidth="60.0" AnchorPane.bottomAnchor="7.599999999999994" AnchorPane.rightAnchor="154.0">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
