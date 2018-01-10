@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -81,6 +82,10 @@ public class MainFrameController {
 
         if(stage == null) {
             stage = new Stage();
+            stage.setResizable(false);
+            stage.setHeight(430);
+            stage.setWidth(430);
+            stage.initModality(Modality.APPLICATION_MODAL);
         }
         SceneLoader.loadScene("view/SetupConnection.fxml",stage);
     }
